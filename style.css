@@ -1,0 +1,154 @@
+:root {
+  --navy: #07182d;
+  --navy-soft: #0c223f;
+  --gold: #c8a675;
+  --offwhite: #f5f4f2;
+}
+
+body {
+  margin: 0;
+  background: var(--offwhite);
+  font-family: Inter, sans-serif;
+  color: #0a2540;
+}
+
+/* HERO LOGO */
+.hero-logo {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: -40px;
+  position: relative;
+  z-index: 5;
+}
+
+.big-logo {
+  width: 180px;
+  height: auto;
+  filter: brightness(1200%);
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 30% 20%, #123a63 0%, #061226 70%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(200,166,117,0.06) 0%, transparent 70%),
+    linear-gradient(45deg, rgba(255,255,255,0.05) 0%, transparent 60%),
+    radial-gradient(circle at 80% 90%, rgba(255,255,255,0.08), transparent 70%);
+  opacity: 0.35;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(50px, 7vw, 80px);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 22px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* VALUES */
+.values {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.values h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.values-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid rgba(200,166,117,0.3);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* CONTACT */
+.contact {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--navy);
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 20px;
+  border: 1px solid var(--gold);
+}
+
+/* Footer */
+footer {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* Fade */
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width: 900px){
+  .values-grid { grid-template-columns: 1fr; }
+}
